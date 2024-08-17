@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Add Remove and Replace</title>
+</head>
+<body>
+  <ul class="lang">
+    <li>JavaScript</li>
+    <li>Python</li>
+    <li>C++</li>
+  </ul>
+</body>
+
+<script>
+  // Add language
+  const addLang = document.createElement('li');
+  addLang.appendChild(document.createTextNode('TypeScript'));
+  document.querySelector('.lang').appendChild(addLang);
+
+  // Replace language
+  const replaceLang = document.createElement('li');
+  replaceLang.appendChild(document.createTextNode('Mojo'));
+  document.querySelector('li:nth-child(2)').replaceWith(replaceLang);
+
+  // Remove language
+  document.querySelector('li:last-child').remove()
+</script>
+</html>

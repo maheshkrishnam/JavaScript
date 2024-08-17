@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Time function</title>
+</head>
+<body>
+  <h1 class="date"></h1>
+  <button class="start">Start</button>
+  <button class="stop">Stop</button>
+
+   <script>
+
+    //  setTimeout  and clearTimeout
+    /*
+    setTimeout(function(){        // setTimeout(function(){}, time interval in  msec)
+    // setTimeout() automatically get run and you don't need to run it
+      // console.log('Timeout');
+      document.querySelector('.name').innerHTML = 'Timeout';
+    }, 2000)
+
+    const changeToName = function(){
+      document.querySelector('.name').innerHTML = 'Mahesh Krishnam'
+    }
+    const toStop = setTimeout(changeToName,4000)        // when you are passing the function just pass the refrence don't call the function
+
+    document.querySelector('.btn').addEventListener('click', () => {
+      clearTimeout(toStop);       // clearTimeout clear the time set for an event to occur by passing its variable (in which it was stored) 
+      console.log('Stopped');
+    })
+    */
+
+
+    //  setInterval and clearInterval
+
+    const date = document.querySelector('.date');
+    const sayDate = function(){
+      date.innerHTML = new Date().toLocaleTimeString();
+    }
+    let toClear;
+    document.querySelector('.start').addEventListener('click', () => {
+      toClear = setInterval(sayDate, 1000);
+    })
+    document.querySelector('.stop').addEventListener('click', () => {
+      clearInterval(toClear);
+    })
+
+    
+   </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="Guess_the_number.css">
+  <title>Guess_the_number</title>
+</head>
+<body>
+  <div class="instructions">
+    <h3>Game Instructions</h3>
+    <p>1] System will generate a random number between 1 to 100.</p>
+    <p>2] You will have 6 chances to guess the correct number</p>
+    <hr style="border: 1px solid rgb(0, 60, 84)">
+    <h4>Previous Guesses: <span class="previousGuess"></span></h4>
+  </div>
+  <form action="">
+    <div class="game">
+      <div>
+        <input type="number" class="userInput" id="input">
+        <button type="submit" class="submit" id="submit">Submit Guess</button>
+      </div>
+      <h4>Remaining Guesses: <span class="remainingGuess">6</span></h4>
+      <div>
+        <h5 class="result"></h5>
+      </div>
+      <div>
+        <button class="startNew">Reset</button>
+      </div>
+    </div>
+  </form>
+
+
+
+  <script src="guess_the_number.js"></script>
+</body>
+</html>

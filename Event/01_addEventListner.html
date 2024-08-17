@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Listner</title>
+  <style>
+    div{
+      height: 100px;
+      width: 100px;
+      background-color: yellow;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <ul id="ul">
+    <div id="Owl">
+      <li>Owl</li>
+    </div>
+    <div id="Elephant">
+      <li>Elephant</li>
+    </div>
+    <div id="Tiger">
+      <li>Tiger</li>
+    </div>
+    <div id="Lion">
+      <li>Lion</li>
+    </div>
+      <li><a href="www.w3.org/TR/">Link</a></li>
+  </ul>
+
+
+  <script>
+
+    /*
+    document.getElementById('ul').addEventListener('click', function(event){
+      console.log('ul clicked');
+    }, false)
+
+    document.getElementById('Owl').addEventListener('click', function(event){
+      console.log('Owl clicked');
+      event.stopPropagation();        //  propagation will stop
+
+    }, false)     */              // false --> represent default case --> EVENT BUBBLINGG --> from inside to out
+                                // true --> represent --> EVENT CAPTURING --> from outside to inside
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget
+    // clientX, clientY, screenX, screenY
+    // altKey, ctrlKey, shiftKey, keyCode
+    
+
+    /*
+    document.getElementById('Link').addEventListener('click', function(event){
+      event.preventDefault();             // will stop the default action done when clicked on link  --> will not open the link 
+      console.log('link clicked');
+      event.stopPropagation();
+    }, false)
+
+    */
+
+    
+    document.querySelector('#ul').addEventListener('click', (event) => {
+      console.log(event);
+      console.log(event.target);            // event.target gives you outerHTML like thing  --> what's inside that event
+      console.log(event.target.innerHTML);
+      console.log(event.target.tagName);        // returns the tag name of that element --> which tag is used for that element, like 'DIV', 'LI', 'IMG'
+
+      if(event.target.tagName === 'DIV'){           // checking tagname to remove that item with that particular tag
+        event.target.remove();
+      }
+      
+    })
+
+
+  </script>
+</body>
+</html>

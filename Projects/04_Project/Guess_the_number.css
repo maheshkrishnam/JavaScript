@@ -1,0 +1,73 @@
+body{
+  display: flex;
+  justify-content: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 30vh;
+}
+
+p{
+  font-weight: 500;
+}
+
+.instructions{
+  height: 280px;
+  width: 230px;
+  border: 1.5px solid black;
+  padding: 20px;
+  background-color: skyblue;
+}
+
+p{
+  height: 45px;
+  width: 250px;
+}
+
+.game{
+  height: 250px;
+  width: 300px;
+  border: 1.5px solid black;
+  border-left: none;
+  padding: 10px;
+  padding-top: 60px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+  #input{
+    height: 40px;
+    width: 100px;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    border: 2px solid rgb(48, 48, 48);
+  }
+  input::-webkit-inner-spin-button,
+  input::-webkit-outer-spin-button{
+    display: none;
+  }
+
+  .submit{
+    height: 63px;
+    background-color: rgb(28, 43, 51);
+    color: skyblue;
+    font-weight: bold;
+    margin-left: 5px;
+    font-size:18px;
+  }
+}
+
+.result{
+  margin-top: 20px;
+  color: rgb(21, 117, 168);
+}
+
+.startNew{
+  margin-top: 10px;
+  height: 30px;
+  width: 100px;
+  background-color: greenyellow;
+  border: 1.5px solid black;
+  font-weight: 700;
+}

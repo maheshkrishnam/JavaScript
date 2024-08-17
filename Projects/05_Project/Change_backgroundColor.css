@@ -1,0 +1,26 @@
+body{
+  display: flex;
+  justify-content: center;
+  margin-top: 15vh;
+}
+
+.background{
+  height: 500px;
+  width: 500px;
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.start,
+.stop{
+  height: 30px;
+  width: 100px;
+  margin: 10px;
+  background-color: yellowgreen;
+  border: 1.5px solid black;
+  border-radius: 5px;
+  font-weight: bold;
+}

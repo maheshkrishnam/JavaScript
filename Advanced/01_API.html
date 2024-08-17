@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+  <p>0   UNSENT  open() has not been called yet.</p>
+  <p>1   OPENED  send() has been called.</p>
+  <p>2   HEADERS_RECEIVED    send() has been called, and headers and status are available.</p>
+  <p>3   LOADING Downloading; responseText holds partial data.</p>
+  <p>4   DONE    The operation is complete.</p>
+</body>
+
+<script>
+  // API is a medium of conversation between two systems
+
+  const requestURL = 'https://api.github.com/users/hiteshchoudhary'
+  const xhr = new XMLHttpRequest();
+  console.log(xhr.readyState);    //  status '0' means open() has not been called
+  xhr.open('GET', requestURL);
+  console.log(xhr.readyState);    // status '1' means send() has not been called
+  xhr.onreadystatechange = function() {
+    console.log(xhr.readyState);
+    //  status '2' means send() has been called, and header and status are available
+    //  status '3' means downloading responseText holds partial data
+
+    if(xhr.readyState === 4){       //  status '4' means operation is complete , download done
+      console.log(this.responseText);
+      console.log(typeof this.responseText);
+      const data = JSON.parse(this.responseText);       //  converting responseText from string to JSON Object
+      console.log(typeof data);
+      console.log(data);
+      console.log(data.followers);
+      console.log(data.avatar_url);
+    }
+  }
+  xhr.send();
+</script>
+</html>

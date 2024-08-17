@@ -1,0 +1,45 @@
+body{
+  display: flex;
+  justify-content:center;
+  color: antiquewhite;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.formEnv{
+  height: 500px;
+  width: 500px;
+  background-color: rgb(58, 50, 64);
+  padding: 25px;
+  padding-top: 40px;
+  border-radius: 10px;
+}
+
+.weight, .height{
+  height: 25px;
+  width: 100px;
+  margin: 10px;
+}
+
+label{
+  margin: 30px;
+}
+
+.submitForm{
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+#submit{
+  height: 40px;
+  width: 100px;
+  font-size: 16px;
+  background-color: rgb(78, 181, 199);
+  border: none;
+  border-radius: 3px;
+}
+
+.result{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
